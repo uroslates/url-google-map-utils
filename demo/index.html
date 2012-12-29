@@ -1,0 +1,118 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+
+		<title>Url Address Form Component</title>
+
+	  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	  <link rel="stylesheet" href="./bootstrap/css/bootstrap-responsive.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<style type="text/css" media="screen">input[type="text"] {height:auto;width:100%;}</style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-offset="50" data-target=".subnav" data-spy="scroll" data-twttr-rendered="true">
+
+ 		<!-- Navbar -->
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container"><a href="./index.html" class="brand">Url Google Mixins</a></div>
+      </div>
+    </div>
+
+    <div class="container">
+
+			<br/><br/><br/><br/>
+			<h3>Location</h3><hr/>
+
+			<div class="well">
+				<p>While filling in the form from below, you will be able to see autocompletition on each of the input fields. Once you select any of the provided autocomplete options all address form fields will be pre-filled out of the address that was selected (all of the appropriate fields that the google service has returned).</p>
+			</div>
+			
+			<form class="form-horizontal" action="">
+
+				<fieldset class="span5">
+
+					<div class="control-group">
+						<label class="control-label" for="id_country">Country</label>
+						<div class="controls">
+								<input type="text" id="id_country" maxlength="60" value="" placeholder="Enter your country or full address" name="country" autocomplete="off">
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label" for="id_region">Region</label>
+						<div class="controls">
+								<input type="text" maxlength="40" name="region" value="" placeholder="Enter your region or full address" id="id_region" autocomplete="off">
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label" for="id_city">City</label>
+						<div class="controls">
+								<input type="text" id="id_city" maxlength="40" value="" placeholder="Enter your city or full address" name="city" autocomplete="off">
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label" for="id_zip_code">Zip code</label>
+						<div class="controls">
+								<input type="text" id="id_zip_code" maxlength="10" value="" placeholder="Enter your zip code or full address" name="zip_code" autocomplete="off">
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label" for="id_street">Street</label>
+						<div class="controls">
+								<input type="text" id="id_street" maxlength="50" value="" placeholder="Enter your street or full address" name="street" autocomplete="off">
+						</div>
+					</div>
+					
+					<div class="control-group">
+						<label class="control-label" for="id_street">Street Number</label>
+						<div class="controls">
+								<input type="text" id="id_street_number" maxlength="50" value="" placeholder="Enter your street number or full address" name="street_number" autocomplete="off">
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset class="span6">
+					<div class="control-group">
+						<div class="control-group">
+							<div class="controls">
+									<div style="width: 100%; height: 210px;" id="map_canvas"></div>
+						</div> <br/>
+						<div class="controls">
+								<input type="text" id="address" value="" placeholder="Enter location to position map to..." style="width:75%;">
+								<input type="button" value="Find on map" onclick="codeAddress()" id="find-on-map-btn" style="background:#FFFFFF;border: 1px solid gray;margin-left: 1%;padding: 3px;width: 22%;">
+						</div>
+					</div>
+				</fieldset>
+			</form>  
+     
+		</div>
+
+
+     <!-- Footer
+      ================================================== -->
+      <footer class="footer container">
+				<hr/>
+        <p>Developed by <a href="mailto:uroslates.com">Uros Lates</a>. Find out more about me on <a target="_blank" href="http://uroslates.com/">http://uroslates.com</a>.</p>
+      </footer>
+
+    </div><!-- /container -->
+       
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&language=en"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	  <script src="bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../url.google-maps-utils.js"></script>
+		<!-- Demo -->
+		<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
